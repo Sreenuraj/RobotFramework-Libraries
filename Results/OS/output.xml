@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.3 on darwin)" generated="20180510 11:50:25.918">
+<suite id="s1" name="OperatingSystem" source="/Sreenu/Robort-Framework/RobotFramework-Libraries/tests/OperatingSystem.robot">
+<test id="s1-t1" name="Create Some Directories">
+<kw name="Create the Base Directory" library="OS">
+<kw name="Create Directory" library="OperatingSystem">
+<doc>Creates the specified directory.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+</arguments>
+<msg timestamp="20180510 11:50:25.957" level="INFO" html="yes">Created directory '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20180510 11:50:25.957" endtime="20180510 11:50:25.957"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+</arguments>
+<msg timestamp="20180510 11:50:25.958" level="INFO" html="yes">Path '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20180510 11:50:25.958" endtime="20180510 11:50:25.958"></status>
+</kw>
+<status status="PASS" starttime="20180510 11:50:25.957" endtime="20180510 11:50:25.958"></status>
+</kw>
+<kw name="Create Directory 1" library="OS">
+<kw name="Join Path" library="OperatingSystem">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory_1}</arg>
+</arguments>
+<assign>
+<var>${directory_path}</var>
+</assign>
+<msg timestamp="20180510 11:50:25.959" level="INFO">${directory_path} = Outputs/first directory</msg>
+<status status="PASS" starttime="20180510 11:50:25.958" endtime="20180510 11:50:25.959"></status>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<doc>Creates the specified directory.</doc>
+<arguments>
+<arg>${directory_path}</arg>
+</arguments>
+<msg timestamp="20180510 11:50:25.959" level="INFO" html="yes">Created directory '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/first directory"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/first directory&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20180510 11:50:25.959" endtime="20180510 11:50:25.960"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${directory_path}</arg>
+</arguments>
+<msg timestamp="20180510 11:50:25.960" level="INFO" html="yes">Path '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/first directory"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/first directory&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20180510 11:50:25.960" endtime="20180510 11:50:25.960"></status>
+</kw>
+<status status="PASS" starttime="20180510 11:50:25.958" endtime="20180510 11:50:25.960"></status>
+</kw>
+<kw name="Create Directory 2" library="OS">
+<kw name="Join Path" library="OperatingSystem">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory_2}</arg>
+</arguments>
+<assign>
+<var>${directory_path}</var>
+</assign>
+<msg timestamp="20180510 11:50:25.961" level="INFO">${directory_path} = Outputs/second directory</msg>
+<status status="PASS" starttime="20180510 11:50:25.961" endtime="20180510 11:50:25.961"></status>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<doc>Creates the specified directory.</doc>
+<arguments>
+<arg>${directory_path}</arg>
+</arguments>
+<msg timestamp="20180510 11:50:25.961" level="INFO" html="yes">Created directory '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20180510 11:50:25.961" endtime="20180510 11:50:25.961"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${directory_path}</arg>
+</arguments>
+<msg timestamp="20180510 11:50:25.962" level="INFO" html="yes">Path '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20180510 11:50:25.962" endtime="20180510 11:50:25.962"></status>
+</kw>
+<status status="PASS" starttime="20180510 11:50:25.960" endtime="20180510 11:50:25.962"></status>
+</kw>
+<tags>
+<tag>OperatingSystem</tag>
+</tags>
+<status status="PASS" starttime="20180510 11:50:25.956" endtime="20180510 11:50:25.962" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Create Some Files">
+<kw name="Create the First File" library="OS">
+<kw name="Join Path" library="OperatingSystem">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory_1}</arg>
+<arg>${file_1}</arg>
+</arguments>
+<assign>
+<var>${file_path}</var>
+</assign>
+<msg timestamp="20180510 11:50:25.963" level="INFO">${file_path} = Outputs/first directory/first file.txt</msg>
+<status status="PASS" starttime="20180510 11:50:25.963" endtime="20180510 11:50:25.963"></status>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${file_path}</arg>
+<arg>This is some text in file one!</arg>
+</arguments>
+<msg timestamp="20180510 11:50:25.964" level="INFO" html="yes">Created file '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/first directory/first file.txt"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/first directory/first file.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20180510 11:50:25.963" endtime="20180510 11:50:25.964"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${file_path}</arg>
+</arguments>
+<msg timestamp="20180510 11:50:25.964" level="INFO" html="yes">Path '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/first directory/first file.txt"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/first directory/first file.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20180510 11:50:25.964" endtime="20180510 11:50:25.964"></status>
+</kw>
+<status status="PASS" starttime="20180510 11:50:25.963" endtime="20180510 11:50:25.964"></status>
+</kw>
+<kw name="Create the Second File" library="OS">
+<kw name="Join Path" library="OperatingSystem">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory_2}</arg>
+<arg>${file_2}</arg>
+</arguments>
+<assign>
+<var>${file_path}</var>
+</assign>
+<msg timestamp="20180510 11:50:25.965" level="INFO">${file_path} = Outputs/second directory/second file.txt</msg>
+<status status="PASS" starttime="20180510 11:50:25.965" endtime="20180510 11:50:25.965"></status>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${file_path}</arg>
+<arg>This is some text in file two!</arg>
+</arguments>
+<msg timestamp="20180510 11:50:25.966" level="INFO" html="yes">Created file '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory/second file.txt"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory/second file.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20180510 11:50:25.965" endtime="20180510 11:50:25.966"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${file_path}</arg>
+</arguments>
+<msg timestamp="20180510 11:50:25.966" level="INFO" html="yes">Path '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory/second file.txt"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory/second file.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20180510 11:50:25.966" endtime="20180510 11:50:25.966"></status>
+</kw>
+<status status="PASS" starttime="20180510 11:50:25.965" endtime="20180510 11:50:25.966"></status>
+</kw>
+<kw name="Create the Third File" library="OS">
+<kw name="Join Path" library="OperatingSystem">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory_2}</arg>
+<arg>${file_3}</arg>
+</arguments>
+<assign>
+<var>${file_path}</var>
+</assign>
+<msg timestamp="20180510 11:50:25.967" level="INFO">${file_path} = Outputs/second directory/third file.txt</msg>
+<status status="PASS" starttime="20180510 11:50:25.967" endtime="20180510 11:50:25.967"></status>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${file_path}</arg>
+<arg>This is some text in file three!</arg>
+</arguments>
+<msg timestamp="20180510 11:50:25.967" level="INFO" html="yes">Created file '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory/third file.txt"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory/third file.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20180510 11:50:25.967" endtime="20180510 11:50:25.968"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${file_path}</arg>
+</arguments>
+<msg timestamp="20180510 11:50:25.968" level="INFO" html="yes">Path '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory/third file.txt"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory/third file.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20180510 11:50:25.968" endtime="20180510 11:50:25.968"></status>
+</kw>
+<status status="PASS" starttime="20180510 11:50:25.966" endtime="20180510 11:50:25.968"></status>
+</kw>
+<tags>
+<tag>OperatingSystem</tag>
+</tags>
+<status status="PASS" starttime="20180510 11:50:25.962" endtime="20180510 11:50:25.968" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Move a File">
+<kw name="Move File 3 from Directory 2 to Directory 1" library="OS">
+<kw name="Join Path" library="OperatingSystem">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory_2}</arg>
+<arg>${file_3}</arg>
+</arguments>
+<assign>
+<var>${source_path}</var>
+</assign>
+<msg timestamp="20180510 11:50:25.970" level="INFO">${source_path} = Outputs/second directory/third file.txt</msg>
+<status status="PASS" starttime="20180510 11:50:25.969" endtime="20180510 11:50:25.970"></status>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory_1}</arg>
+<arg>${file_3}</arg>
+</arguments>
+<assign>
+<var>${target_path}</var>
+</assign>
+<msg timestamp="20180510 11:50:25.970" level="INFO">${target_path} = Outputs/first directory/third file.txt</msg>
+<status status="PASS" starttime="20180510 11:50:25.970" endtime="20180510 11:50:25.970"></status>
+</kw>
+<kw name="Move File" library="OperatingSystem">
+<doc>Moves the source file into the destination.</doc>
+<arguments>
+<arg>${source_path}</arg>
+<arg>${target_path}</arg>
+</arguments>
+<msg timestamp="20180510 11:50:25.976" level="INFO" html="yes">Moved file from '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory/third file.txt"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory/third file.txt&lt;/a&gt;' to '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/first directory/third file.txt"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/first directory/third file.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20180510 11:50:25.970" endtime="20180510 11:50:25.976"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${target_path}</arg>
+</arguments>
+<msg timestamp="20180510 11:50:25.977" level="INFO" html="yes">Path '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/first directory/third file.txt"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/first directory/third file.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20180510 11:50:25.977" endtime="20180510 11:50:25.977"></status>
+</kw>
+<kw name="Should Not Exist" library="OperatingSystem">
+<doc>Fails if the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${source_path}</arg>
+</arguments>
+<msg timestamp="20180510 11:50:25.977" level="INFO" html="yes">Path '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory/third file.txt"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory/third file.txt&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20180510 11:50:25.977" endtime="20180510 11:50:25.977"></status>
+</kw>
+<status status="PASS" starttime="20180510 11:50:25.969" endtime="20180510 11:50:25.977"></status>
+</kw>
+<tags>
+<tag>OperatingSystem</tag>
+</tags>
+<status status="PASS" starttime="20180510 11:50:25.969" endtime="20180510 11:50:25.978" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Copy a File">
+<kw name="Copy File 1 from Directory 1 to Directory 2" library="OS">
+<kw name="Join Path" library="OperatingSystem">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory_1}</arg>
+<arg>${file_1}</arg>
+</arguments>
+<assign>
+<var>${source_path}</var>
+</assign>
+<msg timestamp="20180510 11:50:25.979" level="INFO">${source_path} = Outputs/first directory/first file.txt</msg>
+<status status="PASS" starttime="20180510 11:50:25.978" endtime="20180510 11:50:25.979"></status>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory_2}</arg>
+<arg>${file_1}</arg>
+</arguments>
+<assign>
+<var>${target_path}</var>
+</assign>
+<msg timestamp="20180510 11:50:25.979" level="INFO">${target_path} = Outputs/second directory/first file.txt</msg>
+<status status="PASS" starttime="20180510 11:50:25.979" endtime="20180510 11:50:25.979"></status>
+</kw>
+<kw name="Copy File" library="OperatingSystem">
+<doc>Copies the source file into the destination.</doc>
+<arguments>
+<arg>${source_path}</arg>
+<arg>${target_path}</arg>
+</arguments>
+<msg timestamp="20180510 11:50:25.983" level="INFO" html="yes">Copied file from '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/first directory/first file.txt"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/first directory/first file.txt&lt;/a&gt;' to '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory/first file.txt"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory/first file.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20180510 11:50:25.979" endtime="20180510 11:50:25.983"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${source_path}</arg>
+</arguments>
+<msg timestamp="20180510 11:50:25.984" level="INFO" html="yes">Path '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/first directory/first file.txt"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/first directory/first file.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20180510 11:50:25.984" endtime="20180510 11:50:25.984"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${target_path}</arg>
+</arguments>
+<msg timestamp="20180510 11:50:25.984" level="INFO" html="yes">Path '&lt;a href="file:///Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory/first file.txt"&gt;/Sreenu/Robort-Framework/RobotFramework-Libraries/Outputs/second directory/first file.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20180510 11:50:25.984" endtime="20180510 11:50:25.984"></status>
+</kw>
+<status status="PASS" starttime="20180510 11:50:25.978" endtime="20180510 11:50:25.985"></status>
+</kw>
+<tags>
+<tag>OperatingSystem</tag>
+</tags>
+<status status="PASS" starttime="20180510 11:50:25.978" endtime="20180510 11:50:25.985" critical="yes"></status>
+</test>
+<doc>This is to understand the operating system lib</doc>
+<status status="PASS" starttime="20180510 11:50:25.920" endtime="20180510 11:50:25.985"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0">Critical Tests</stat>
+<stat pass="4" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="4" fail="0">OperatingSystem</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" id="s1" name="OperatingSystem">OperatingSystem</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
