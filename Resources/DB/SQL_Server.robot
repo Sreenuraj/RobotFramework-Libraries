@@ -6,10 +6,10 @@ Library  Dialogs
 
 *** Variables ***
 # replace the server & credentials with your own
-${DB_NAME} =  rftutorial
-${DB_USER_NAME} =  rftutorial
-${DB_USER_PASSWORD} =  Demoscript1!
-${DB_HOST} =  sql1100.shared-servers.com
+${DB_NAME} =  TestDB
+${DB_USER_NAME} =  sa
+${DB_USER_PASSWORD} =  needschanging
+${DB_HOST} =  127.0.0.1
 ${DB_PORT} =  1090
 ${PREVIOUS_ROW_COUNT}
 

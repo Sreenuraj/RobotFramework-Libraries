@@ -7,18 +7,18 @@ Library  Dialogs
 *** Variables ***
 # Haven't figured out how to use variables for MySql connection string yet
 ${MYSQL_DB_MODULE} =  pymssql
-${DB_NAME} =  rftutorial
-${DB_USER_NAME} =  rftutorial
-${DB_USER_PASSWORD} =  Demoscript1!
-${DB_HOST} =  mysql1100.shared-servers.com
-${DB_PORT} =  1091
+${DB_NAME} =  TestDB
+${DB_USER_NAME} =  root
+${DB_USER_PASSWORD} =  mysql
+${DB_HOST} =  localhost
+${DB_PORT} =  5036
 ${PREVIOUS_ROW_COUNT}
 
 *** Keywords ***
 # replace the server & credentials with your own
 Connect
     # Haven't figured out how to use variables for MySql connection string yet
-    Connect To Database Using Custom Params  pymysql  database='rftutorial', user='rftutorial', password='Demoscript1!', host='mysql1100.shared-servers.com', port=1091
+    Connect To Database Using Custom Params  pymysql  database='TestDB', user='root', password='mysql', host='127.0.0.1', port=5036
 
 Save Current Row Count
     ${current_row_count} =  Row Count  SELECT * FROM DemoItems;
